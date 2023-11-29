@@ -1,0 +1,16 @@
+<div id="modal-background" class="modal-background" (click)="onCloseModal()"></div>
+
+<div>
+
+    <div class="modal">
+        <div class="modal-sell">
+            <h3>{{ juego?.titulo }}</h3>
+            <p *ngIf="juego?.descripcion">{{ juego?.descripcion }}</p>
+            <p *ngIf="juego?.plataforma">Plataformas: {{ juego?.plataforma?.join(', ') }}</p>
+            <p *ngIf="juego?.precio !== undefined">Precio: ${{ juego?.precio }}</p>
+            <p *ngIf="juego?.tags">Clasificación: {{ juego?.tags?.join(', ') }}</p>
+            <p *ngIf="juego?.estrellas !== undefined">Estrellas: {{ juego?.estrellas }}</p>
+        </div>
+    </div>
+
+</div>

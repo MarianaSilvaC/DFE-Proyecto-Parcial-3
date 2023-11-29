@@ -1,0 +1,66 @@
+@import '_variables.scss';
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.modal-sell {
+    width: 60rem;
+    padding: 1.5rem;
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: $font-size-bold;
+    }
+
+    .modal-form {
+        justify-content: space-between;
+
+        input[type='number'] {
+            width: 2rem;
+        }
+
+        input[type='submit'] {
+            background-color: $color-green;
+            color: $color-white;
+            padding: 0 0.5rem;
+            @include hover($color-green-hover);
+        }
+    }
+
+    .cart {
+        margin-left: 3rem;
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 1rem;
+
+            td {
+                text-align: center;
+            }
+        }
+
+        .cart-total {
+            justify-content: space-between;
+        }
+    }
+}

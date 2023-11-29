@@ -1,0 +1,16 @@
+
+<div id="new-item-section" class="f-display">
+    <div *ngFor="let juego of listadoJuegos" class="new-item-card" (click)="seleccionarJuego(juego)">
+      <img [src]="juego.imagen" alt="{{ juego.titulo }}" class="cover">
+      <div>
+        <h5 class="title">{{ juego.titulo }}</h5>
+        <p class="card-text">{{ juego.descripcion }}</p>
+        <p class="item-card-plataforma">Plataforma: {{ juego.plataforma.join(', ') }}</p>
+        <p class="price">Precio: ${{ juego.precio }}</p>
+        <p class="tags">Clasificación: {{ juego.tags }}</p>
+      </div>
+    </div>
+  </div>
+ 
+  <app-detalle-juego *ngIf="juegoSeleccionado" [juego]="juegoSeleccionado" (close)="cerrarModal()"></app-detalle-juego>
+ 

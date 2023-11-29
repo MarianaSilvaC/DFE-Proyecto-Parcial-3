@@ -1,0 +1,41 @@
+@import '_variables.scss';
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-cerulean;
+    @include shadow($color-cerulean);
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    height: $header-height;
+
+    nav {
+        ul {
+            display: block;
+            text-transform: uppercase;
+            list-style: none;
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+            margin-right: 2rem;
+            padding: 0.5rem 2rem;
+            @include hover($color-white-hover);
+            // @include transition();
+
+            &:hover {
+                border-radius: 1rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $font-color-light;
+            font-weight: $font-size-bold;
+        }
+    }
+}
