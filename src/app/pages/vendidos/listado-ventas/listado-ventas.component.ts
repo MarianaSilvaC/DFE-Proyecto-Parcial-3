@@ -15,11 +15,22 @@ export class ListadoVentasComponent {
   
   @Input() cargandoVentas = false;
 
+  ventaSeleccionada: Ventas | null = null;
+
   constructor(private utilidadesService: UtilidadesService) { }
 
   obtenerTitulosProductos(productos: Producto[]): string {
     return this.utilidadesService.obtenerTitulosProductos(productos);
   }
 
+  cerrarModal(): void {
+    this.ventaSeleccionada = null;
+  }
+
+  seleccionarVenta(venta: Ventas) {
+    this.ventaSeleccionada = venta;
+  }
+  
+  
 
 }
